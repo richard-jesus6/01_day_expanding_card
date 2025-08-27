@@ -1,0 +1,74 @@
+/* Importa una fuente desde Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+/* El * aplica a todos los elementos de la página */
+* {
+    box-sizing: border-box; /* Hace que padding y border no aumenten el tamaño total del elemento */
+}
+
+/* Estilos generales del body */
+body {
+    font-family: 'Muli', sans-serif; /* Fuente del texto */
+    display: flex;                   /* Usa flexbox para organizar contenido */
+    align-items: center;             /* Centra verticalmente */
+    justify-content: center;         /* Centra horizontalmente */
+    height: 100vh;                   /* Ocupa el 100% de la altura de la ventana */
+    overflow: hidden;                /* Oculta el scroll si sobra contenido */
+    margin: 0;                       /* Quita márgenes por defecto */
+}
+
+/* Contenedor de todas las tarjetas */
+.container {
+    display: flex;   /* Coloca las tarjetas en fila */
+    width: 90vw;     /* Ancho del contenedor: 90% del viewport */
+}
+
+/* Estilos de cada tarjeta */
+.panel {
+    background-size: cover;          /* La imagen cubre todo el panel */
+    background-position: center;     /* Centra la imagen */
+    background-repeat: no-repeat;    /* Evita que la imagen se repita */
+    height: 80vh;                    /* Altura del panel */
+    border-radius: 50px;             /* Bordes redondeados */
+    color: #fff;                     /* Texto en color blanco */
+    cursor: pointer;                 /* Cambia cursor a "mano" al pasar */
+    flex: 0.5;                       /* Tamaño inicial pequeño */
+    margin: 10px;                    /* Espacio entre paneles */
+    position: relative;              /* Necesario para posicionar el texto dentro */
+    transition: all 700ms ease-in;   /* Animación suave al cambiar */
+    -webkit-transition: all 700ms ease-in; /* Soporte en navegadores viejos */
+}
+
+/* Estilos del título dentro de cada panel */
+.panel h3 {
+    font-size: 24px;      /* Tamaño del texto */
+    position: absolute;   /* Se coloca relativo al panel */
+    bottom: 40px;         /* Desde abajo 40px */
+    left: 40px;           /* Desde la izquierda 40px */
+    margin: 0;            /* Quita margen por defecto */
+    opacity: 0;           /* Invisible al inicio */
+}
+
+/* Cuando el panel tiene la clase "active" */
+.panel.active {
+    flex: 5;  /* Se expande (ocupa más espacio) */
+}
+
+/* El título aparece solo cuando el panel está activo */
+.panel.active h3 {
+    opacity: 1;                             /* Se vuelve visible */
+    transition: opacity 0.3s ease-in 0.4s;  /* Aparece con un pequeño retraso */
+}
+
+/* Diseño responsivo para pantallas pequeñas */
+@media (max-width: 480px) {
+    .container {
+        width: 100vw; /* Usa todo el ancho de la pantalla */
+    }
+
+    /* Oculta la 4ta y 5ta tarjeta en móviles */
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+}

@@ -1,38 +1,51 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Indica que este documento es de tipo HTML5 -->
 <html lang="en">
 
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <title>Expanding Card</title>
+        <meta charset="UTF-8"> <!-- Configuración de caracteres (soporta acentos y ñ) -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Compatibilidad con navegadores antiguos -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Escala para dispositivos móviles -->
+        <link rel="stylesheet" href="style.css"> <!-- Enlace al archivo de estilos CSS -->
+        <title>Expanding Card</title> <!-- Título que aparece en la pestaña del navegador -->
     </head>
 
     <body>
-        <div class="container">
+        <!-- Contenedor principal que agrupa todas las tarjetas -->
+        <div class="container"> <!-- Nombre de la clase principal -->
+
+            <!-- Cada "panel" representa una tarjeta con imagen de fondo -->
+            <!-- El primero tiene la clase "active", por lo que aparecerá expandido al inicio -->
             <div class="panel active"
                 style="background-image: url('https://images.unsplash.com/photo-1558979158-65a1eaa08691?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80')">
-                <h3>Explore the world</h3>
+                <h3>Explore the world</h3> <!-- Texto superpuesto en la tarjeta -->
             </div>
+
+            <!-- Segunda tarjeta -->
             <div class="panel"
                 style="background-image: url('https://images.unsplash.com/photo-1572276596237-5db2c3e16c5d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');">
                 <h3>Wild Forest</h3>
             </div>
+
+            <!-- Tercera tarjeta -->
             <div class="panel"
                 style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80');">
                 <h3>Sunny Beach</h3>
             </div>
+
+            <!-- Cuarta tarjeta -->
             <div class="panel"
                 style="background-image: url('https://images.unsplash.com/photo-1551009175-8a68da93d5f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80');">
                 <h3>City on Winter</h3>
             </div>
+
+            <!-- Quinta tarjeta -->
             <div class="panel"
                 style="background-image: url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');">
                 <h3>Mountains - Clouds</h3>
             </div>
         </div>
 
+        <!-- Archivo JavaScript donde se controlará la lógica de expansión de las tarjetas -->
         <script src="script.js"></script>
     </body>
 
